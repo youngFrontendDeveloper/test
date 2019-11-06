@@ -39,18 +39,18 @@ if(scoop == null){
 // }
   // window.onload = addSongs;
 
-function init(){
-    var planet = document.getElementById('greenplanet');
-    planet.innerHTML = "Red Alert: hit by phaser fire!";
-    planet.setAttribute('class', 'redtext');
-    planet.setAttribute('id', 'bg');
-    var planetAttribute = planet.getAttribute('class');
-    var image = document.getElementById('raspberry');
-    image.setAttribute('width', '20%');
-    delete 
-  console.log(planetAttribute);
-  }
-  window.onload = init;
+// function init(){
+//     var planet = document.getElementById('greenplanet');
+//     planet.innerHTML = "Red Alert: hit by phaser fire!";
+//     planet.setAttribute('class', 'redtext');
+//     planet.setAttribute('id', 'bg');
+//     var planetAttribute = planet.getAttribute('class');
+//     var image = document.getElementById('raspberry');
+//     image.setAttribute('width', '20%');
+//     delete 
+//   console.log(planetAttribute);
+//   }
+//   window.onload = init;
   
 
 var test1 = "abcdef";
@@ -89,3 +89,131 @@ if (99 == '99') {
 }
 
 console.log("true" == true);
+
+function findCarInLot(car) {
+  for (var i = 0; i < lot.length; i++) {
+    if (car === lot[i]) {
+      return i;
+    }
+  }
+  return -1;
+}
+var chevy = {
+  make: "Chevy",
+  model: "Bel Air"
+};
+var taxi = {
+  make: "Webville Motors",
+  model: "Taxi"
+};
+var fiat1 = {
+  make: "Fiat",
+  model: "500"
+};
+var fiat2 = {
+  make: "Fiat",
+  model: "500"
+};
+
+var lot = [chevy, taxi, fiat1, fiat2];
+
+var loc1 = findCarInLot(fiat2);
+var loc2 = findCarInLot(taxi);
+var loc3 = findCarInLot(chevy);
+var loc4 = findCarInLot(fiat1);
+
+console.log(loc1);
+console.log(loc2);
+console.log(loc3);
+console.log(loc4);
+
+//+++++++++++++++++++++++++++ Детектор лжи
+
+function lieDetectorTest() {
+  var lies = 0;
+  var stolenDiamond = { };
+  if (stolenDiamond) {
+      console.log("You stole the diamond");
+      lies++;
+  }
+  var car = {
+      keysInPocket: null
+  };
+  if (car.keysInPocket) {
+      console.log("Uh oh, guess you stole the car!");
+      lies++;
+  }
+  if (car.emptyGasTank) {
+      console.log("You drove the car after you stole it!");
+      lies++;
+  }
+  var foundYouAtTheCrimeScene = [ ];
+  if (foundYouAtTheCrimeScene) {
+      console.log("A sure sign of guilt");
+      lies++;
+  }
+  if (foundYouAtTheCrimeScene[0]) {
+      console.log("Caught with a stolen item!");
+      lies++;
+  }
+  var yourName = " ";
+  if (yourName) {
+      console.log("Guess you lied about your name");
+      lies++;
+  }
+  return lies;
+}
+var numberOfLies = lieDetectorTest();
+console.log("You told " + numberOfLies + " lies!");
+if (numberOfLies >= 3) {
+  console.log("guilty as charged");
+}
+
+
+//============================= Проверяем текст
+
+// var text = "YOU SHOULD NEVER SHOUT WHEN TYPING";
+// var presentableText = text.toLowerCase();
+// if (presentableText.length > 0) {
+//   alert(presentableText);
+// }
+
+// var name = "Yakov";
+// document.write(name.length);
+
+//++++++++++++++++Строчные методы
+//Метод split - Разбивка строки
+
+var st = "one two three four five six";
+
+var st_sp_1 = st.split(" ");
+console.log(st_sp_1);
+
+var st_sp_2 = st.split("t");
+console.log(st_sp_2);
+
+var st_sp_3 = st.split("/");
+console.log(st_sp_3);
+
+var data = "name/phone/adress";
+var vals = data.split("/");
+console.log("Split array is ", vals);
+
+//Борьба за кресло
+
+function validate(phoneNumber){
+  if (phoneNumber.length !== 8) {
+    return false;
+  }
+  for (var i = 0; i < phoneNumber.length; i++){
+    if (i === 3) {
+      if (phoneNumber.charAt(i) !== '-') {
+        return false;
+      }
+    } else if (isNaN(phoneNumber.charAt(i))) {
+      return false;
+    }
+  }
+  return true;
+}
+
