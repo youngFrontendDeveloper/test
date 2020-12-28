@@ -1,4 +1,4 @@
 "This is the first note on the file" 
 "This is second note in the file" 
 "This is the third note in the file on the branch clear" 
-"This is the new note in the file"
+"This is note in the file"
