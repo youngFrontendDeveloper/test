@@ -1,1 +1,2 @@
 "Это файл на второй ветке" 
+"This is second note in the file" 
