@@ -1,4 +1,1 @@
-"�� ���� ������ �� �⮩ ��⪥" 
-"�� ������ ��ண� ������" 
-
-"This is the third note"  
+"This is the new note in the file" 
