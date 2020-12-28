@@ -1,7 +1,0 @@
-"Contains" 
-"Update the file" 
-"Опять какое-то изменение" 
-"Text" 
-"New text" 
-"New" 
-"Another new" 
